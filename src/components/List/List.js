@@ -8,7 +8,7 @@ import Creator from '../Creator/Creator.js';
 import PropTypes from 'prop-types';
 
 class List extends React.Component { //! class component should always start with propTypes.
-  state ={
+  state = {
     columns: this.props.columns || [], // if this.props.columns has not been defined, i.e. the component has not received props columns, then this.state.columns will contain an empty array []
   }
 
@@ -28,17 +28,17 @@ class List extends React.Component { //! class component should always start wit
     return (
       <section className={styles.component}>
         <Hero
-        titleText={this.props.title}
-        imageSrc={this.props.image}
+          titleText={this.props.title}
+          imageSrc={this.props.image}
         />
         <div className={styles.description}>
           {ReactHtmlParser(this.props.description)}
         </div>
         <div className={styles.columns}>
-        {this.state.columns.map(({key, ...columnProps}) => (
-          // In this case (in a loop or .map method if we generate a component for each element in the array), we have to give each column the key. It has to be done explicitly - i.e. in the JSX code there must be expresion 'key = {}'.
-          <Column key={key} {...columnProps} />
-        ))}
+          {this.state.columns.map(({key, ...columnProps}) => (
+            // In this case (in a loop or .map method if we generate a component for each element in the array), we have to give each column the key. It has to be done explicitly - i.e. in the JSX code there must be expresion 'key = {}'.
+            <Column key={key} {...columnProps} />
+          ))}
         </div>
         <div className={styles.creator}>
           {/* this function does not change the meaning of 'this', so it still points to an instance of the class. If we insert action={this.addColumn}, then it points to addColumn() */}
