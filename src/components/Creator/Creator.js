@@ -15,6 +15,7 @@ class Creator extends React.Component {
   state = {
     value: '',
     visibleButtons: false,
+    amount: ''
   }
 
   handleChange = event => {
@@ -40,6 +41,18 @@ class Creator extends React.Component {
       value: '',
       visibleButtons: false
     });
+    window.confirm('Operation cancelled');
+  }
+
+  handleInfo = (event) => {
+    const parent = event.target.parentElement.parentElement.parentElement;
+    const lenght = parent.children.length - 2;
+    //console.log(parent, lenght.toString());
+    if(lenght > 0) {
+      window.confirm('Amount of cards in the column: ' + lenght.toString());
+    } else {
+      window.confirm('Amount of cards in the column: ' + 0);
+    }
   }
 
   render() {
@@ -54,6 +67,7 @@ class Creator extends React.Component {
         <div className={styles.buttons + (this.state.visibleButtons ? ' ' + styles.buttonsShown : '')}>
           <Button onClick={this.handleOK}>OK</Button>
           <Button onClick={this.handleCancel} variant='danger'>cancel</Button>
+          <Button onClick={this.handleInfo} variant='info'>Info</Button>
         </div>
       </div>
     );

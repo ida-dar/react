@@ -22,3 +22,22 @@
 .title + .subtitle {
   margin-top: (- $base-size * 3);
 }
+
+.newList {
+  width: calc(33% - 12px);
+  background: $color-light;
+  margin: ($base-size * 4) auto;
+  padding: ($base-size * 1.5);
+  border-radius: $radius;
+  box-shadow: 0 ($base-size / 4) 0 rgba(0,0,0,0.3);
+  color: $color-dark;
+}
+
+@media (max-width: 767px) {
+
+  .newList {
+    overflow: hidden;
+    width: 100%;
+  }
+
+}
