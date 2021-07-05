@@ -8,7 +8,7 @@ class Hamburger extends React.Component {
 
   render() {
     return (
-      <div onClick={this.toggleList} ref={ref => { this.menuToggler = ref }} id='menuToggler' className={styles.component}>
+      <div onClick={this.toggleList} ref={ref => { this.menuToggler = ref; }} id='menuToggler' className={styles.component}>
         <i className="fas fa-bars"></i>
       </div>
     );

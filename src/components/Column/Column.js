@@ -15,6 +15,7 @@ class Column extends React.Component {
     title: PropTypes.node.isRequired,
     name: PropTypes.string,
     cards: PropTypes.array,
+    icon: PropTypes.string,
   }
 
   // static defaultProps = {
@@ -34,7 +35,7 @@ class Column extends React.Component {
         
         <Creator text={settings.cardCreatorText} action={title => this.addCard(title)} haveCards={this.haveCards} />
       </section>
-    )
+    );
   }
 
   addCard(title) {
@@ -46,7 +47,7 @@ class Column extends React.Component {
             key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
             title,
           },
-        ]
+        ],
       }
     ));
   }

@@ -48,7 +48,7 @@ class List extends React.Component { //! class component should always start wit
           {/* <Creator text={settings.columnCreatorText} action={this.addColumn.bind(this)}/> */}
         </div>
       </section>
-    )
+    );
   }
 
   addColumn(title){
@@ -60,9 +60,9 @@ class List extends React.Component { //! class component should always start wit
             key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
             title,
             icon: 'list-alt',
-            cards: []
-          }
-        ]
+            cards: [],
+          },
+        ],
       }
     ));
   }
