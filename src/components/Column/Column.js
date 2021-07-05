@@ -21,6 +21,8 @@ class Column extends React.Component {
   //   name: settings.defaultColumnIcon,
   // }
 
+  haveCards = this.state.cards.length > 0
+  
   render() {
     return (
       <section className={styles.component}>
@@ -30,7 +32,7 @@ class Column extends React.Component {
           <Card key={key} {...cardProps} />
         ))}
         
-        <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
+        <Creator text={settings.cardCreatorText} action={title => this.addCard(title)} haveCards={this.haveCards} />
       </section>
     )
   }

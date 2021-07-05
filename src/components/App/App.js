@@ -3,6 +3,7 @@ import styles from './App.scss';
 import List from '../List/List.js';
 import {pageContents, listData, settings} from '../../data/dataStore';
 import Creator from '../Creator/Creator';
+import Hamburger from '../Hamburger/Hamburger.js';
 
 class App extends React.Component {
   state = {
@@ -17,6 +18,7 @@ class App extends React.Component {
         {/* <List {...listData} title={[ 'Things to do ', <sup key='1'>soon!</sup> ]} image='http://uploads.kodilla.com/bootcamp/fer/11.react/space.png'>
           <p>I'm planning on doing all these things sonner, rather than later!</p>
         </List> */}
+        <Hamburger />
         <List {...listData} />
         {this.state.lists.map(({key, ...listProps}) => (
           <List key={key} {...listProps} />

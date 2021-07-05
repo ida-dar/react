@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 class Creator extends React.Component {
   static propTypes = {
     text: PropTypes.string,
+    haveCards: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -67,7 +68,7 @@ class Creator extends React.Component {
         <div className={styles.buttons + (this.state.visibleButtons ? ' ' + styles.buttonsShown : '')}>
           <Button onClick={this.handleOK}>OK</Button>
           <Button onClick={this.handleCancel} variant='danger'>cancel</Button>
-          <Button onClick={this.handleInfo} variant='info'>Info</Button>
+          {this.props.haveCards && <Button onClick={this.handleInfo} variant='info'>Info</Button>}
         </div>
       </div>
     );
