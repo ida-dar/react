@@ -4,7 +4,7 @@ import {settings} from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 import Hero from '../Hero/Hero.js';
 import Column from '../Column/ColumnContainer.js';
-// import Creator from '../Creator/Creator.js';
+import Creator from '../Creator/Creator.js';
 import PropTypes from 'prop-types';
 
 class List extends React.Component { //! class component should always start with propTypes.
@@ -14,6 +14,7 @@ class List extends React.Component { //! class component should always start wit
     image: PropTypes.string,
     description: PropTypes.node,
     columns: PropTypes.array,
+    addColumn: PropTypes.func,
   }
 
   static defaultProps = {
@@ -22,8 +23,7 @@ class List extends React.Component { //! class component should always start wit
   }
 
   render() {
-    //console.log(this.state);
-    const {title, image, description, columns} = this.props;
+    const {title, image, description, columns, addColumn} = this.props;
     return (
       <section className={styles.component}>
         <Hero
@@ -37,17 +37,10 @@ class List extends React.Component { //! class component should always start wit
           {columns.map(columnData => (
             <Column key={columnData.id} {...columnData} />
           ))}
-          {/* {this.state.columns.map(({key, ...columnProps}) => (
-            // In this case (in a loop or .map method if we generate a component for each element in the array), we have to give each column the key. It has to be done explicitly - i.e. in the JSX code there must be expresion 'key = {}'.
-            <Column key={key} {...columnProps} />
-          ))} */}
         </div>
-        {/*<div className={styles.creator}>
-          {/* this function does not change the meaning of 'this', so it still points to an instance of the class. If we insert action={this.addColumn}, then it points to addColumn() 
-          <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
-           another option:
-           <Creator text={settings.columnCreatorText} action={this.addColumn.bind(this)}/>
-        </div> */}
+        <div className={styles.creator}>
+          <Creator text={settings.columnCreatorText} action={addColumn}/>
+        </div>
       </section>
     );
   }
