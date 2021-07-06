@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './App.scss';
-import List from '../List/List.js';
-import {pageContents, listData, settings} from '../../data/dataStore';
-import Creator from '../Creator/Creator';
-import Hamburger from '../Hamburger/Hamburger.js';
+import List from '../List/ListContainer.js';
+//import { listData, settings } from '../../data/dataStore';
+//import Creator from '../Creator/Creator';
+//import Hamburger from '../Hamburger/Hamburger.js';
 import PropTypes from 'prop-types';
 
 class App extends React.Component {
@@ -12,25 +12,32 @@ class App extends React.Component {
   }
 
   static propTypes = {
+    title: PropTypes.node,
+    subtitle: PropTypes.node,
     lists: PropTypes.array,
   }
 
   render() {
+    const {title, subtitle, lists} = this.props;
     return (
       <main className={styles.component}>
-        <h1 className={styles.title}>{pageContents.title}</h1>
-        <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>
+        <h1 className={styles.title}>{title}</h1>
+        <h2 className={styles.subtitle}>{subtitle}</h2>
+        {lists.map(listData => (
+          <List key={listData.id} {...listData} />
+        ))}
         {/* <List {...listData} title={[ 'Things to do ', <sup key='1'>soon!</sup> ]} image='http://uploads.kodilla.com/bootcamp/fer/11.react/space.png'>
           <p>I'm planning on doing all these things sonner, rather than later!</p>
         </List> */}
-        <Hamburger />
-        <List {...listData} />
-        {this.state.lists.map(({key, ...listProps}) => (
+        {/* TODO: Hamburger - lists toggler */}
+        {/* <Hamburger /> */}
+        {/* <List {...listData} /> */}
+        {/* {this.state.lists.map(({key, ...listProps}) => (
           <List key={key} {...listProps} />
-        ))}
-        <div className={styles.newList}>
+        ))} */}
+        {/* <div className={styles.newList}>
           <Creator text={settings.listCreatorText} action={title => this.addList(title)} />
-        </div>
+        </div> */}
       </main>
     );
   }
