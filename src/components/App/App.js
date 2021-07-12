@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './App.scss';
+import {BrowserRouter, Route} from 'react-router-dom';
+import { AnimatedSwitch } from 'react-router-transition';
 import Home from '../Home/HomeContainer';
 import Info from '../Info/Info';
 import FAQ from '../FAQ/FAQ';
-import {BrowserRouter, Route} from 'react-router-dom';
+import List from '../List/ListContainer';
 import MainLayout from '../MainLayout/MainLayout';
-import { AnimatedSwitch } from 'react-router-transition';
 
 const App = () => (
   <BrowserRouter>
@@ -19,6 +20,7 @@ const App = () => (
         <Route exact path="/" component={Home} />
         <Route exact path="/info" component={Info} />
         <Route exact path="/faq" component={FAQ} />
+        <Route exact path="/list/:id" component={List} />
       </AnimatedSwitch>
     </MainLayout>
   </BrowserRouter>

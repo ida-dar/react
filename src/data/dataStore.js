@@ -82,6 +82,18 @@ const lists = [
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+  {
+    id: 'list-2',
+    title: 'Places I want to visit <sup>soon!</sup>',
+    description: 'Interesting places I want to check out!',
+    image: 'https://images.pexels.com/photos/3935702/pexels-photo-3935702.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+  },
+  {
+    id: 'list-3',
+    title: 'Food I want to try <sup>soon!</sup>',
+    description: 'Food I want to check out!',
+    image: 'https://images.pexels.com/photos/628776/pexels-photo-628776.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+  },
 ];
 
 const columns = [
@@ -106,7 +118,37 @@ const columns = [
   {
     id: 'column-4',
     listId: 'list-2',
-    title: 'Strange column',
+    title: 'Europe',
+    icon: 'question',
+  },
+  {
+    id: 'column-5',
+    listId: 'list-2',
+    title: 'Australia',
+    icon: 'question',
+  },
+  {
+    id: 'column-6',
+    listId: 'list-2',
+    title: 'Asia',
+    icon: 'question',
+  },
+  {
+    id: 'column-7',
+    listId: 'list-3',
+    title: 'Vege',
+    icon: 'question',
+  },
+  {
+    id: 'column-8',
+    listId: 'list-3',
+    title: 'Meat',
+    icon: 'question',
+  },
+  {
+    id: 'column-9',
+    listId: 'list-3',
+    title: 'Pasta',
     icon: 'question',
   },
 ];
@@ -141,6 +183,21 @@ const cards = [
     id: 'card-6',
     columnId: 'column-3',
     title: 'Skyrim',
+  },
+  {
+    id: 'card-7',
+    columnId: 'column-4',
+    title: 'Denmark',
+  },
+  {
+    id: 'card-8',
+    columnId: 'column-5',
+    title: 'Sydney',
+  },
+  {
+    id: 'card-9',
+    columnId: 'column-6',
+    title: 'Japan',
   },
 ];
 
