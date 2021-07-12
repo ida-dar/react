@@ -13,7 +13,8 @@ export const settings = {
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
-  defaultListImage: 'https://images.pexels.com/photos/194094/pexels-photo-194094.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  defaultImage: 'https://images.pexels.com/photos/194094/pexels-photo-194094.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  defaultHeaderIcon: 'user-astronaut',
 };
 
 export const pageContents = {
@@ -142,6 +143,27 @@ const cards = [
     title: 'Skyrim',
   },
 ];
+
+export const infoText = {
+  imageTitle: 'Some info about the app',
+  title: 'Info',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  image: 'https://images.pexels.com/photos/194094/pexels-photo-194094.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+};
+
+export const faqContent = {
+  imageTitle: 'Have some questions?',
+  title: 'FAQ',
+  image: 'https://images.pexels.com/photos/194094/pexels-photo-194094.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+  faq: [
+    'Lorem ipsum dolor sit amet',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    'Lorem ipsum dolor sit amet',
+    'Lorem ipsum dolor sit amet',
+  ],
+};
 
 const initialStoreData = {
   app: {...pageContents},

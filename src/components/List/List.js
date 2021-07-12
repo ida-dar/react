@@ -20,7 +20,7 @@ class List extends React.Component { //! class component should always start wit
 
   static defaultProps = {
     description: settings.defaultListDescription, // default property value. If no content for list description is given, then the default decription is inserted.
-    image: settings.defaultListImage,
+    image: settings.defaultImage,
   }
 
   render() {

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Hero.scss';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
+import { settings } from '../../data/dataStore';
 
 const Hero = props => (
   <header className={styles.component}>
@@ -15,6 +16,10 @@ const Hero = props => (
 Hero.propTypes = {
   titleText: PropTypes.node.isRequired,
   imageSrc: PropTypes.string,
+};
+
+Hero.defaultProps = {
+  imageSrc: settings.defaultListImage,
 };
 
 export default Hero;
