@@ -10,8 +10,8 @@ import Container from '../Container/Container.js';
 
 class List extends React.Component { //! class component should always start with propTypes.
 
-  static propTypes = {  // property in which we save type definitions must be called 'propTypes' in which we save an object. Keys in the object are components' properties. For each property name, we provide its type, using the types saved in the imported PropTypes object.
-    title: PropTypes.node.isRequired, // 'isRequired' displays an error in console if the component doesn't receive the propperty. Without 'isRequired' the propperty is optional.
+  static propTypes = {
+    title: PropTypes.node.isRequired,
     image: PropTypes.string,
     description: PropTypes.node,
     columns: PropTypes.array,
@@ -19,7 +19,7 @@ class List extends React.Component { //! class component should always start wit
   }
 
   static defaultProps = {
-    description: settings.defaultListDescription, // default property value. If no content for list description is given, then the default decription is inserted.
+    description: settings.defaultListDescription,
     image: settings.defaultImage,
   }
 

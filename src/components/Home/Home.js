@@ -1,9 +1,6 @@
 import React from 'react';
 import styles from './Home.scss';
 import ListLink from '../ListLink/ListLink';
-//import { settings } from '../../data/dataStore';
-//import Creator from '../Creator/Creator';
-//import Hamburger from '../Hamburger/Hamburger.js';
 import PropTypes from 'prop-types';
 
 class Home extends React.Component {

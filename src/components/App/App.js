@@ -7,6 +7,7 @@ import Info from '../Info/Info';
 import FAQ from '../FAQ/FAQ';
 import List from '../List/ListContainer';
 import MainLayout from '../MainLayout/MainLayout';
+import SearchResultContainer from '../SearchResult/SearchResultContainer';
 
 const App = () => (
   <BrowserRouter>
@@ -21,6 +22,7 @@ const App = () => (
         <Route exact path="/info" component={Info} />
         <Route exact path="/faq" component={FAQ} />
         <Route exact path="/list/:id" component={List} />
+        <Route exact path="/search/:searchString" component={SearchResultContainer} />
       </AnimatedSwitch>
     </MainLayout>
   </BrowserRouter>

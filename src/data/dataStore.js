@@ -22,6 +22,10 @@ export const pageContents = {
   subtitle: 'A simple to-do app, with lists, columns and cards',
 };
 
+export const searchData = {
+  title: 'Search results',
+};
+
 export const listData = {
   title: 'Things to do <sup>soon!</sup>',
   description: 'Interesting things I want to check out!',
@@ -119,37 +123,37 @@ const columns = [
     id: 'column-4',
     listId: 'list-2',
     title: 'Europe',
-    icon: 'question',
+    icon: 'plane',
   },
   {
     id: 'column-5',
     listId: 'list-2',
     title: 'Australia',
-    icon: 'question',
+    icon: 'plane',
   },
   {
     id: 'column-6',
     listId: 'list-2',
     title: 'Asia',
-    icon: 'question',
+    icon: 'plane',
   },
   {
     id: 'column-7',
     listId: 'list-3',
     title: 'Vege',
-    icon: 'question',
+    icon: 'utensils',
   },
   {
     id: 'column-8',
     listId: 'list-3',
     title: 'Meat',
-    icon: 'question',
+    icon: 'utensils',
   },
   {
     id: 'column-9',
     listId: 'list-3',
     title: 'Pasta',
-    icon: 'question',
+    icon: 'utensils',
   },
 ];
 
@@ -227,6 +231,7 @@ const initialStoreData = {
   lists: [...lists],
   columns: [...columns],
   cards: [...cards],
+  search: {...searchData},
 };
 
 export default initialStoreData;
